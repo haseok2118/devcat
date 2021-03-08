@@ -253,8 +253,8 @@ main {
 }
 .close-listBox {
   cursor: pointer;
-  line-height: 34px;
-  font-size: 23px;
+  line-height: 38px;
+  font-size: 20px;
 }
 
 .button-box {
@@ -262,18 +262,24 @@ main {
   justify-content: flex-start;
 }
 
-/* 새로 생성되는 리스트에 적용될 스타일*/
+/* 새로 생성되는 리스트 헤더 스타일*/
 .list-box {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   width: 260px;
-  min-height: 50px;
+
+  height: auto;
+  min-height: 100px;
   background-color: #ebecf0;
   margin-right: 10px;
   padding: 10px;
+  position: relative;
 }
 .list-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  max-height: 30px;
   margin-bottom: 10px;
 }
 .list-box-title {
@@ -287,7 +293,49 @@ main {
   opacity: 0.7;
   cursor: pointer;
 }
+/*카드 생성 스타일*/
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.content-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 20px;
 
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  box-shadow: 0 1.5px 1.5px 0 rgba(0, 0, 0, 0.2),
+    0 1px 1px 0 rgba(0, 0, 0, 0.19);
+  cursor: grab;
+}
+.content-container:active {
+  cursor: grabbing;
+}
+.card-content {
+  flex-grow: 1;
+  font-size: 20px;
+  line-height: 25px;
+  background-color: #fff;
+  overflow: visible;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.drag {
+  flex-grow: 1;
+  display: none;
+  width: 100%;
+  min-height: 20px;
+  line-height: 25px;
+  background-color: #ebecf0;
+  margin-top: 10px;
+  opacity: 0.5;
+}
+/*카드 생성 버튼 스타일*/
 .add-card-wrapper {
   position: relative;
   display: flex;
@@ -309,7 +357,6 @@ main {
   color: #172b4d;
   cursor: pointer;
 }
-
 .card-input-wrapper {
   position: absolute;
   display: none;
@@ -319,7 +366,6 @@ main {
   padding: 5px;
   background-color: #ebecf0;
 }
-
 .input-card-content {
   width: 100%;
   min-height: 34px;
@@ -348,28 +394,6 @@ main {
 }
 .close-input-box {
   cursor: pointer;
-  line-height: 34px;
-  font-size: 23px;
-}
-.content-container {
-  position: relative;
-  width: 100%;
-  min-height: 20px;
-  background-color: #fff;
-  color: black;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding-left: 5px;
-  box-shadow: 0 1.5px 1.5px 0 rgba(0, 0, 0, 0.2),
-    0 1px 1px 0 rgba(0, 0, 0, 0.19);
-  cursor: grab;
-}
-.content-container:active {
-  cursor: grabbing;
-}
-.card-content {
-  position: absolute;
+  line-height: 38px;
   font-size: 20px;
-  line-height: 20px;
-  overflow: visible;
 }

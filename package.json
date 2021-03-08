@@ -2,7 +2,7 @@
   "name": "devcat",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "/client/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/haseok2118/devcat/issues"
   },
-  "homepage": "https://github.com/haseok2118/devcat#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "homepage": "https://github.com/haseok2118/devcat#readme"
 }
